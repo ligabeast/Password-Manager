@@ -1,5 +1,5 @@
 function getEmailOrUsername() {
-  return document.querySelectorAll("input [type='email'], ");
+  return document.querySelector("input[type='email']");
 }
 
 console.log(getEmailOrUsername());
