@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Password-Manager",
+  "version": "1.0.1",
+  "description": "Password Manager for the Webbrowser",
+  "icons": {
+    "16": "./images/16picture-1.png",
+    "48": "./images/48picture-1.png",
+    "128": "./images/128picture-1.png"
+  },
+  "permissions": ["storage", "tabs"],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["content/content-script.css"],
+      "js": ["content/content-script.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "./images/16picture-1.png",
+      "48": "./images/48picture-1.png",
+      "128": "./images/128picture-1.png"
+    },
+    "default_title": "Password-Manager",
+    "default_popup": "popup/popup.html"
+  }
+}
