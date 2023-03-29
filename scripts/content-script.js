@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   setTimeout(function () {
-    console.log(getEmail());
-    console.log(getPassword());
+    const inputEmail = getEmail();
+    const inputPassword = getEmail();
   }, 2000);
 });
 

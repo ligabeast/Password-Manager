@@ -4,9 +4,9 @@
   "version": "1.0.1",
   "description": "Password Manager for the Webbrowser",
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "scripts/background.js"
   },
-  "permissions": ["storage", "activeTab"],
+  "permissions": ["storage", "activeTab", "tabs"],
   "icons": {
     "16": "./images/16picture-1.png",
     "48": "./images/48picture-1.png",
@@ -16,8 +16,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "css": ["content/content-script.css"],
-      "js": ["content/content-script.js"],
+      "js": ["scripts/content-script.js"],
       "run_at": "document_start"
     }
   ],
@@ -28,6 +27,6 @@
       "128": "./images/128picture-1.png"
     },
     "default_title": "Password-Manager",
-    "default_popup": "popup/popup.html"
+    "default_popup": "html/popup.html"
   }
 }

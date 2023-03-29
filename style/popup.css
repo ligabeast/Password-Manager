@@ -1,0 +1,111 @@
+.Logo-Container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+a {
+  font: 300 42px "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 38, 0) 10%,
+    rgb(19, 233, 0) 50%,
+    rgb(0, 0, 0) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+a:hover,
+.Logo-Container:hover {
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0, 0, 0.23, 1);
+  background-position: 0%;
+}
+
+.Logo-Text {
+  font-family: "Tahoma", sans-serif;
+  font-size: 25px;
+}
+
+.Logo-Image {
+  height: 100px;
+}
+
+body {
+  margin: 4px !important;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: Verdana, sans-serif;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  float: right;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(71, 114, 255);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(71, 114, 255);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.options {
+  margin: 20px;
+  font-size: 14px;
+}
